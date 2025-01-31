@@ -4,7 +4,7 @@ import helmet from 'helmet';
 
 import { AppModule } from './app.module';
 import { config } from './config/config';
-// import { GlobalExceptionFilter } from './common/error/globalException.filter';
+import { GlobalExceptionFilter } from './common/error/globalException.filter';
 
 async function bootstrap(): Promise<void> {
   const app = await NestFactory.create(AppModule);
@@ -28,7 +28,7 @@ async function bootstrap(): Promise<void> {
     })
   );
   app.useGlobalPipes(new ValidationPipe());
-  // app.useGlobalFilters(new GlobalExceptionFilter());
+  app.useGlobalFilters(new GlobalExceptionFilter());
 
   await app.listen(config.app.port);
 

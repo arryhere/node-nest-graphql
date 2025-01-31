@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpStatus, Injectable } from '@nestjs/common';
 import { GraphQLError } from 'graphql';
 import { JwtService } from '@nestjs/jwt';
 import bcryptjs from 'bcryptjs';
@@ -208,7 +208,7 @@ export class AuthService {
       const passwordCompare = await bcryptjs.compare(signInInput.password, user.passwordHash);
 
       if (!passwordCompare) {
-        throw new GraphQLError('Invalid Credentials');
+        throw new GraphQLError('Invalid Credentials', { extensions: { code: HttpStatus.BAD_REQUEST } });
       }
 
       if (user.mfa) {
