@@ -5,29 +5,37 @@
   "editor.rulers": [120],
   "editor.suggest.selectionMode": "always",
   "editor.formatOnSave": true,
+  "editor.wordWrap": "off",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit"
+  },
+  // "editor.fontSize": 12,
   "explorer.autoReveal": false,
   "explorer.compactFolders": false,
   "explorer.sortOrder": "type",
   "workbench.editor.enablePreview": true,
-  "workbench.editor.wrapTabs": true,
   "terminal.integrated.scrollback": 100000000,
+  // "terminal.integrated.fontSize": 12,
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor"
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[sql]": {
-    "editor.defaultFormatter": "mtxr.sqltools"
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "sqltools.format": {
     "language": "sql",

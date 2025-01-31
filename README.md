@@ -104,6 +104,6 @@
 # Dependency Update
 
 - npm outdated
-- npm i <dependency>@latest
+- npm i <_dependency_>@latest
 
 ---
